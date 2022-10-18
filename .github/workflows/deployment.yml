@@ -22,7 +22,7 @@ jobs:
 
       - name: Deploy my app
         run: |
-          # add your deployment code here
+          echo "Deploying my app"
 
       - name: Update deployment status (success)
         if: success()
