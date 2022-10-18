@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: chrnorm/deployment-action@v2
         name: deploy
-        id: deploy
+        id: deployment
         with:
           token: '${{ github.token }}'
           environment-url: http://my-app-url.com
