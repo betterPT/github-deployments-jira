@@ -14,4 +14,3 @@ jobs:
       - uses: chrnorm/deployment-action@v2
         name: deploy
         id: deploy
-        run: echo "DEPLOYED"
