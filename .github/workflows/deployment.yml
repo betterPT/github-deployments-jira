@@ -1,0 +1,17 @@
+name: Deploy
+
+on: [push]
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    permissions:
+      deployments: write
+  
+    steps:
+      - uses: chrnorm/deployment-action@v2
+        name: deploy
+        id: deploy
+        run: echo "DEPLOYED"
