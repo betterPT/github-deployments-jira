@@ -12,17 +12,15 @@ jobs:
   
     steps:
       - uses: chrnorm/deployment-action@v2
-        
-        - name: deploy
-          id: deploy
-          with:
-            token: '${{ github.token }}'
-            environment-url: http://my-app-url.com
-            environment: development
-            state: 'success'
-            
-        - name: Update deployment status (failure)
-          if: failure()
+        name: deploy
+        id: deploy
+        with:
+          token: '${{ github.token }}'
+          environment-url: http://my-app-url.com
+          environment: development
+
+        name: Update deployment status (failure)
+        if: failure()
           uses: chrnorm/deployment-status@v2
           with:
             token: '${{ github.token }}'
